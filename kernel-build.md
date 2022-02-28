@@ -32,7 +32,7 @@ make install
 
 ```bash
 Rename device tree blobs to fix a symlink:
-mv /boot/dtbs/<new-version> /boot/dtb-<new-version>
+mv /boot/dtbs/<new-version> /boot/dtb-<new-version> # for old in /boot/dtbs/*; do new="$(echo $old | sed s#dtbs/#dtb-#g)"; mv $old $new; done
 ```
 
 Set compiled kernel as default kernel:
